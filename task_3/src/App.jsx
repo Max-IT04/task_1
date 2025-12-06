@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 
+const BUTTONS = [
+	'7', '8', '9', '+',
+	'4', '5', '6', '-',
+	'1', '2', '3', '=',
+	'0', 'C'
+];
+
 function App() {
 
 	const [operand1, setOperand1] = useState('');
@@ -8,13 +15,6 @@ function App() {
 	const [operand2, setOperand2] = useState('');
 	const [result, setResult] = useState(null);
 	const [isResultDisplayed, setIsResultDisplayed] = useState(false);
-
-	const BUTTONS = [
-		'7', '8', '9', '+',
-		'4', '5', '6', '-',
-  	    '1', '2', '3', '=',
-  		'0', 'C'
-	];
 
 	const handleNumberClick = (num) => {
 		if (isResultDisplayed) {
