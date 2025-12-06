@@ -9,6 +9,11 @@ export const App = () => {
 	const onInputButtonClick = () => {
 		let promptValue = prompt("Введите значение");
 
+		if (!promptValue) {
+			setError("Ввод отменён или пустое значение");
+			return;
+		}
+
 		if (promptValue.length < 3) {
 			setError("Введенное значение должно содержать минимум 3 символа");
 		} else {
